@@ -1,8 +1,8 @@
 [app]
-quality_llm = "google/gemini-pro"
-fast_llm = "google/gemini-pro"      # or "google/gemini-pro-vision" for vision tasks
-reasoning_llm = "google/gemini-pro"
-planning_llm = "google/gemini-pro"
+fast_llm = "gemini/gemini-2.0-flash-lite"
+quality_llm = "gemini/gemini-2.0-flash"
+vlm = "gemini/gemini-2.0-flash"
+audio_lm = "gemini/gemini-2.0-flash-lite"
 
 [completion]
 provider = "r2r"
