@@ -1,0 +1,34 @@
+[app]
+quality_llm = "google/gemini-pro"
+fast_llm = "google/gemini-pro"      # or "google/gemini-pro-vision" for vision tasks
+reasoning_llm = "google/gemini-pro"
+planning_llm = "google/gemini-pro"
+
+[completion]
+provider = "r2r"
+concurrent_request_limit = 16 # Adjust to your infra/resources
+
+[completion.generation_config]
+temperature = 0.1
+top_p = 1.0
+max_tokens_to_sample = 4096
+stream = false
+add_generation_kwargs = {}
+
+[database]
+provider = "postgres"
+user = "postgres"
+password = "dag@13645440"
+host = "bbzxfkkhuttmtwffdift.supabase.co"
+port = 5432
+db_name = "postgres"
+project_name = "AwareeAI"
+
+[auth]
+enable = true
+
+[filestorage]
+provider = "supabase"
+supabase_url = "https://bbzxfkkhuttmtwffdift.supabase.co"
+supabase_bucket = "documents"
+supabase_service_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJienhma2todXR0bXR3ZmZkaWZ0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgxMjUzMjksImV4cCI6MjA2MzcwMTMyOX0.HjFmkfpx_1DNO5HJEutz_-FQG-u4Gi7bqHj6McfpT9E"
