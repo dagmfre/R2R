@@ -6,7 +6,7 @@ audio_lm = "gemini/gemini-2.0-flash-lite"
 
 [completion]
 provider = "r2r"
-concurrent_request_limit = 16 # Adjust to your infra/resources
+concurrent_request_limit = 16
 
 [completion.generation_config]
 temperature = 0.1
@@ -17,18 +17,17 @@ add_generation_kwargs = {}
 
 [database]
 provider = "postgres"
-user = "postgres"
-password = "dag@13645440"
-host = "bbzxfkkhuttmtwffdift.supabase.co"
-port = 5432
-db_name = "postgres"
-project_name = "AwareeAI"
+user = "${R2R_POSTGRES_USER}"
+password = "${R2R_POSTGRES_PASSWORD}"
+host = "${R2R_POSTGRES_HOST}"
+port = "${R2R_POSTGRES_PORT}"
+db_name = "${R2R_POSTGRES_DBNAME}"
+project_name = "${R2R_PROJECT_NAME}"
 
 [auth]
 provider = "supabase"
 
 [filestorage]
 provider = "s3"
-endpoint_url = "https://bbzxfkkhuttmtwffdift.supabase.co/storage/v1/s3"
-bucket_name = "aware-ai-bucket"
-region_name = "us-east-2"
+endpoint_url = "${SUPABASE_STORAGE_ENDPOINT}"
+bucket_name = "${SUPABASE_BUCKET_NAME}"
