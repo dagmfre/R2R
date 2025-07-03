@@ -1,1 +1,0 @@
-web: python -m r2r.serve
