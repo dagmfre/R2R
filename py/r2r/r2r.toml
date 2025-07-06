@@ -31,8 +31,8 @@ research_tools = ["rag", "reasoning", "critique", "python_executor"]
 provider = "r2r"
 access_token_lifetime_in_minutes = 60000
 refresh_token_lifetime_in_days = 7
-require_authentication = true
-require_email_verification = true
+require_authentication = false
+require_email_verification = false
 default_admin_email = "dagmfre@gmail.com"
 default_admin_password = "admin1234"
 
